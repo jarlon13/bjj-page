@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.images-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.images-section img {
+    width: 33.33%;
+    height: auto;
+}
+
+.description-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    flex: 1; /* Ensures this section takes up remaining space if needed */
+}
+
+.description-section h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.description-section p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Ensures the footer sticks to the bottom if the content is short */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .images-section img {
+        width: 50%;
+    }
+
+    .images-section img:nth-child(3) {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .images-section img {
+        width: 100%;
+    }
+}
+
+* {
+    box-sizing: inherit;
+}
